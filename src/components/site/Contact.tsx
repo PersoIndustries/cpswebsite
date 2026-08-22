@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, MapPin, Linkedin, Send } from "lucide-react";
+import { Instagram, Mail, MapPin, Linkedin, Send } from "lucide-react";
 import { profile } from "@/data/site";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -22,6 +22,7 @@ export function Contact() {
   const links = [
     { icon: Linkedin, label: "LinkedIn", value: "carlos-peralta-sorolla", href: profile.linkedin },
     { icon: Send, label: "X / Twitter", value: "@perso_dev", href: profile.x },
+    { icon: Instagram, label: "Instagram", value: "@pers0", href: profile.instagram },
     { icon: Mail, label: "Email", value: profile.email, href: `mailto:${profile.email}` },
   ];
 

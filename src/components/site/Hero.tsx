@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ArrowRight, Linkedin, MapPin, Sparkles } from "lucide-react";
+import { ArrowRight, Instagram, Linkedin, MapPin, Sparkles } from "lucide-react";
 import { profile } from "@/data/site";
 import { Button } from "@/components/ui/button";
 import { useLang, ui } from "@/lib/i18n";
@@ -30,10 +30,11 @@ export function Hero() {
         <div className="animate-rise">
           <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-3 py-1 text-xs text-muted-foreground">
             <Sparkles className="size-3.5 animate-pulse text-emerald-accent" />
-            {profile.alias}
+            a.k.a. <strong className="font-semibold text-emerald-accent">{profile.alias}</strong>
           </span>
           <h1 className="mt-5 text-4xl font-semibold leading-[1.05] tracking-tight sm:text-6xl">
-            {profile.name}
+            {profile.name}{" "}
+            <span className="text-gradient whitespace-nowrap">«{profile.alias}»</span>
           </h1>
           <p className="mt-4 text-base font-medium sm:text-lg">
             <span className="text-gradient">{t(profile.tagline)}</span>
@@ -77,6 +78,14 @@ export function Hero() {
               className="inline-flex items-center gap-2 transition-colors hover:text-foreground"
             >
               <span className="text-sm font-bold">X</span> @perso_dev
+            </a>
+            <a
+              href={profile.instagram}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 transition-colors hover:text-foreground"
+            >
+              <Instagram className="size-4" /> @pers0
             </a>
             <span className="inline-flex items-center gap-2">
               <MapPin className="size-4" /> Fraga, Huesca
