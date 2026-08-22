@@ -1,172 +1,415 @@
 import carlosImg from "@/assets/carlos.jpg.asset.json";
-import cvPdf from "@/assets/cv.pdf.asset.json";
+
+export type L = { es: string; en: string };
 
 export const profile = {
   name: "Carlos Peralta Sorolla",
   alias: "Perso_Dev",
-  tagline: "Creative & Hands-on | Games · Tech · Agriculture · AI",
-  intro:
-    "Hola, soy Carlos. Persona creativa y proactiva con fuertes skills de gente y actitud hands-on. Empecé joven en los negocios familiares (vivero, planta de compostaje y granjas). He sido Head of Studio en Blackmouth Games liderando proyectos Web3/multiplayer. Actualmente desarrollo mis propios proyectos (LayerSuite, XCarbon…) y ayudo en los negocios familiares mientras estudio IA.",
-  now: "Actualmente trabajando en LayerSuite, XCarbon y ayudando en los negocios familiares mientras estudio IA.",
+  tagline: {
+    es: "Creative & Hands-on | Games · Tech · Web3 · Agriculture",
+    en: "Creative & Hands-on | Games · Tech · Web3 · Agriculture",
+  } satisfies L,
+  intro: {
+    es: "Hola, soy Carlos. Persona creativa y proactiva, con buen trato con la gente y actitud hands-on. Empecé muy joven en los negocios familiares (vivero, planta de compostaje y granjas). He sido Head of Studio en Blackmouth Games, liderando Domenation y varios proyectos multijugador y Web3. Hoy desarrollo mis propios productos (LayerSuite, XCarbon), imprimo en 3D bajo pedido y sigo formándome con dos másteres.",
+    en: "Hi, I'm Carlos. A creative, proactive person with strong people skills and a hands-on attitude. I started young in my family's businesses (nursery, composting plant and farms). I was Head of Studio at Blackmouth Games, leading Domenation and several multiplayer and Web3 projects. Today I build my own products (LayerSuite, XCarbon), run a 3D printing service and I'm studying two master's degrees.",
+  } satisfies L,
+  now: {
+    es: "Ahora mismo: LayerSuite y XCarbon, impresión 3D bajo pedido, apoyo en los negocios familiares y dos másteres en marcha (MBA + Project Management y Mercados Financieros & Gestión de Activos).",
+    en: "Right now: LayerSuite and XCarbon, 3D printing on demand, helping in the family businesses and two master's degrees in progress (MBA + Project Management and Financial Markets & Asset Management).",
+  } satisfies L,
   photo: carlosImg.url,
-  cv: cvPdf.url,
   email: "carlosperaltasorolla@gmail.com",
-  phone: "(+34) 664 02 01 76",
-  phoneRaw: "+34664020176",
-  location: "Fraga, Huesca, Spain — abierto a oportunidades abroad",
+  location: {
+    es: "Fraga, Huesca (España) — abierto a oportunidades en el extranjero",
+    en: "Fraga, Huesca (Spain) — open to opportunities abroad",
+  } satisfies L,
   linkedin: "https://www.linkedin.com/in/carlos-peralta-sorolla",
   x: "https://x.com/perso_dev",
 };
 
-export const nav = [
-  { label: "Inicio", href: "#inicio" },
-  { label: "Sobre mí / CV", href: "#sobre-mi" },
-  { label: "Tools", href: "#tools" },
-  { label: "Empresas & Apps", href: "#empresas" },
-  { label: "Juegos", href: "#juegos" },
-  { label: "Redes & Contacto", href: "#contacto" },
+export const nav: { label: L; href: string }[] = [
+  { label: { es: "Inicio", en: "Home" }, href: "#inicio" },
+  { label: { es: "Sobre mí / CV", en: "About / CV" }, href: "#sobre-mi" },
+  { label: { es: "Empresas & Apps", en: "Companies & Apps" }, href: "#empresas" },
+  { label: { es: "Web3", en: "Web3" }, href: "#web3" },
+  { label: { es: "Juegos", en: "Games" }, href: "#juegos" },
+  { label: { es: "Impresión 3D", en: "3D Printing" }, href: "#impresion-3d" },
+  { label: { es: "En cola", en: "In the pipeline" }, href: "#en-cola" },
+  { label: { es: "Otros proyectos", en: "Other projects" }, href: "#otros" },
+  { label: { es: "Tools", en: "Tools" }, href: "#tools" },
+  { label: { es: "Contacto", en: "Contact" }, href: "#contacto" },
 ];
 
-export const tools = [
+export const tools: { name: string; icon: string; description: L; href: string }[] = [
   {
     name: "STL Cutter",
     icon: "Scissors",
-    description:
-      "Divide modelos STL en piezas imprimibles cuando no caben en la cama de impresión.",
+    description: {
+      es: "Divide modelos STL en piezas imprimibles cuando no caben en la cama de impresión.",
+      en: "Splits STL models into printable pieces when they don't fit the print bed.",
+    },
     href: "#stl-cutter",
   },
   {
     name: "Helix Force",
     icon: "Cog",
-    description:
-      "Calculadora de fuerzas y parámetros para husillos y mecanismos helicoidales.",
+    description: {
+      es: "Calculadora de fuerzas y parámetros para husillos y mecanismos helicoidales.",
+      en: "Force and parameter calculator for lead screws and helical mechanisms.",
+    },
     href: "#helix-force",
   },
   {
     name: "SQL to Markdown",
     icon: "Table",
-    description:
-      "Convierte esquemas y resultados SQL en tablas Markdown limpias en un clic.",
+    description: {
+      es: "Convierte esquemas y resultados SQL en tablas Markdown limpias en un clic.",
+      en: "Turns SQL schemas and results into clean Markdown tables in one click.",
+    },
     href: "#sql-to-markdown",
   },
 ];
 
-export const companies = [
+export const companies: {
+  name: string;
+  icon: string;
+  description: L;
+  href: string;
+  status: L;
+}[] = [
   {
     name: "Jardiper",
     icon: "Sprout",
-    description: "Centro de jardinería y vivero familiar en Fraga (Huesca).",
+    description: {
+      es: "Centro de jardinería y vivero familiar en Fraga (Huesca).",
+      en: "Family garden center and nursery in Fraga (Huesca, Spain).",
+    },
     href: "https://www.jardiper.es/",
-    status: "Activo",
+    status: { es: "Activo", en: "Active" },
   },
   {
     name: "LIETT Iberica",
     icon: "Recycle",
-    description: "Planta de compostaje y agricultura familiar.",
+    description: {
+      es: "Planta de compostaje y agricultura familiar: operaciones, maquinaria e IT.",
+      en: "Family composting plant and agriculture: operations, machinery and IT.",
+    },
     href: "#liett",
-    status: "Activo",
-  },
-  {
-    name: "Libro de campo para tu huerto",
-    icon: "NotebookPen",
-    description: "App para la gestión y el cuaderno de campo de tu huerto.",
-    href: "#libro-de-campo",
-    status: "App",
+    status: { es: "Activo", en: "Active" },
   },
   {
     name: "Layer Suite",
     icon: "Layers",
-    description:
-      "Plataforma de gestión especializada para negocios de impresión 3D.",
+    description: {
+      es: "Plataforma de gestión especializada para negocios de impresión 3D. Stack: React, SQL, Stripe.",
+      en: "Management platform built for 3D printing businesses. Stack: React, SQL, Stripe.",
+    },
     href: "#layersuite",
-    status: "WIP",
+    status: { es: "WIP", en: "WIP" },
   },
   {
     name: "XCarbon.io",
     icon: "Leaf",
-    description:
-      "SaaS de planta de compostaje + créditos de carbono Web3 y marketplace.",
+    description: {
+      es: "SaaS para plantas de compostaje + créditos de carbono Web3 y marketplace.",
+      en: "SaaS for composting plants + Web3 carbon credits and marketplace.",
+    },
     href: "#xcarbon",
-    status: "WIP",
+    status: { es: "WIP", en: "WIP" },
   },
 ];
 
-export const games = [
+export const web3: { name: string; icon: string; description: L }[] = [
+  {
+    name: "Domenation — token, NFTs & dApp",
+    icon: "Coins",
+    description: {
+      es: "Ecosistema Web3 alrededor de un shooter multijugador de PC: token, colecciones NFT y una dApp propia conectada al juego.",
+      en: "Web3 ecosystem around a multiplayer PC shooter: token, NFT collections and an in-house dApp connected to the game.",
+    },
+  },
+  {
+    name: "XCarbon — créditos de carbono on-chain",
+    icon: "Leaf",
+    description: {
+      es: "Tokenización de créditos de carbono generados en planta de compostaje, con trazabilidad y marketplace.",
+      en: "Tokenization of carbon credits generated at a composting plant, with traceability and a marketplace.",
+    },
+  },
+  {
+    name: "Zodiak & Telegram Web3",
+    icon: "Send",
+    description: {
+      es: "Mini-juegos en Telegram con wallets, recompensas on-chain y progresión social.",
+      en: "Telegram mini-games with wallets, on-chain rewards and social progression.",
+    },
+  },
+  {
+    name: "Producto & operativa Web3",
+    icon: "Blocks",
+    description: {
+      es: "Gestión de comunidades, tokenomics, integración de wallets y coordinación con partners y exchanges.",
+      en: "Community management, tokenomics, wallet integrations and coordination with partners and exchanges.",
+    },
+  },
+];
+
+export const games: { name: string; role: L; description: L; href: string }[] = [
   {
     name: "Domenation (Time Defenders)",
-    role: "Head of Studio — Blackmouth Games",
-    description:
-      "Shooter multijugador de PC con ecosistema Web3, NFTs y dApp propia.",
+    role: { es: "Head of Studio — Blackmouth Games", en: "Head of Studio — Blackmouth Games" },
+    description: {
+      es: "Shooter multijugador de PC a gran escala, con ecosistema Web3 (token, NFTs y dApp).",
+      en: "Large-scale multiplayer PC shooter with a Web3 ecosystem (token, NFTs and dApp).",
+    },
     href: "#domenation",
   },
   {
     name: "Zodiak",
-    role: "Head of Studio — Blackmouth Games",
-    description: "Telegram Game con progresión social y mecánicas casual.",
+    role: { es: "Head of Studio — Blackmouth Games", en: "Head of Studio — Blackmouth Games" },
+    description: {
+      es: "Telegram game con progresión social, mecánicas casual y capa Web3.",
+      en: "Telegram game with social progression, casual mechanics and a Web3 layer.",
+    },
     href: "#zodiak",
   },
   {
     name: "Hit n'Rush",
-    role: "Game Producer",
-    description: "Juego multijugador de PC, acción y competición rápida.",
+    role: { es: "Game Producer", en: "Game Producer" },
+    description: {
+      es: "Juego multijugador de PC, acción y competición rápida.",
+      en: "Multiplayer PC game: fast action and competition.",
+    },
     href: "#hitnrush",
   },
   {
     name: "Mitico",
-    role: "Producer / Product",
-    description: "Proyecto de entretenimiento, Web3 y streaming deportivo.",
+    role: { es: "Producer / Product", en: "Producer / Product" },
+    description: {
+      es: "Proyecto de entretenimiento, Web3 y streaming deportivo.",
+      en: "Entertainment project mixing Web3 and sports streaming.",
+    },
     href: "#mitico",
   },
   {
     name: "Necrognomicon",
-    role: "Producer — Playstation Talents (18 personas)",
-    description: "Proyecto seleccionado en Playstation Talents.",
+    role: { es: "Game Producer — Playstation Talents", en: "Game Producer — Playstation Talents" },
+    description: {
+      es: "Proyecto seleccionado en Playstation Talents, equipo de 18-26 personas.",
+      en: "Project selected for Playstation Talents, team of 18-26 people.",
+    },
     href: "#necrognomicon",
   },
   {
     name: "Unthrone",
-    role: "Njoy Games — proyecto universitario (35 personas)",
-    description: "Proyecto de gran equipo desarrollado en la universidad.",
+    role: { es: "Producer — Njoy Games (universidad)", en: "Producer — Njoy Games (university)" },
+    description: {
+      es: "Proyecto universitario de gran equipo: 35 personas.",
+      en: "Large university project with a 35-person team.",
+    },
     href: "#unthrone",
   },
   {
-    name: "Game jams & otros",
-    role: "Varios roles",
-    description: "MIO, LTT y otros prototipos de jams y proyectos académicos.",
-    href: "#jams",
+    name: "LTT",
+    role: { es: "Designer, Producer & Programmer (C/C++)", en: "Designer, Producer & Programmer (C/C++)" },
+    description: {
+      es: "Proyecto final de grado desarrollado en solitario.",
+      en: "Final degree project developed solo.",
+    },
+    href: "#ltt",
   },
 ];
 
-export const experience = [
+export const printing: { title: L; description: L }[] = [
   {
-    role: "Head of Studio",
+    title: { es: "Piezas bajo pedido", en: "Parts on demand" },
+    description: {
+      es: "Impresión FDM y resina de piezas funcionales, recambios, prototipos y regalos personalizados.",
+      en: "FDM and resin printing of functional parts, spares, prototypes and custom gifts.",
+    },
+  },
+  {
+    title: { es: "Diseño y adaptación 3D", en: "3D design & adaptation" },
+    description: {
+      es: "Modelado desde cero o adaptación de un STL existente para que encaje y se imprima bien.",
+      en: "Modelling from scratch or adapting an existing STL so it fits and prints properly.",
+    },
+  },
+  {
+    title: { es: "Piezas grandes", en: "Large parts" },
+    description: {
+      es: "Corte y ensamblaje de modelos que no caben en la cama de impresión (con mi tool STL Cutter).",
+      en: "Cutting and assembling models that don't fit the print bed (using my STL Cutter tool).",
+    },
+  },
+];
+
+export const queue: { name: string; icon: string; description: L }[] = [
+  {
+    name: "Libro de campo para tu huerto",
+    icon: "NotebookPen",
+    description: {
+      es: "App de cuaderno de campo para gestionar tratamientos, riegos y cosechas de tu huerto.",
+      en: "Field-notebook app to manage treatments, watering and harvests in your vegetable garden.",
+    },
+  },
+  {
+    name: "My Ham Radio Museum",
+    icon: "Radio",
+    description: {
+      es: "Museo digital para catalogar y compartir colecciones de radioafición.",
+      en: "Digital museum to catalogue and share ham radio collections.",
+    },
+  },
+];
+
+export const otherProjects: { name: string; description: L; href?: string; period?: string }[] = [
+  {
+    name: "Eurometales",
+    description: {
+      es: "Diseño y desarrollo de la web corporativa.",
+      en: "Design and development of the corporate website.",
+    },
+    href: "https://eurometales.com/",
+  },
+  {
+    name: "Jardiper.es",
+    description: {
+      es: "Web del centro de jardinería familiar: contenido, catálogo y mantenimiento.",
+      en: "Website for the family garden center: content, catalogue and maintenance.",
+    },
+    href: "https://www.jardiper.es/",
+  },
+  {
+    name: "LIETT Iberica",
+    description: {
+      es: "Web corporativa de la planta de compostaje y agricultura.",
+      en: "Corporate website for the composting and agriculture business.",
+    },
+  },
+  {
+    name: "Predictive Sport Drive (PSD)",
+    description: {
+      es: "Research Designer, gestión y programación (C#) en Creative Lab — Carnet Research HUB, equipo de 4 personas.",
+      en: "Research Designer, management and programming (C#) at Creative Lab — Carnet Research HUB, 4-person team.",
+    },
+    period: "2018 — 2019",
+  },
+  {
+    name: "Asoc. Fraga LAN Party",
+    description: {
+      es: "Organizador del evento local de videojuegos y tecnología.",
+      en: "Organizer of the local gaming and technology event.",
+    },
+    period: "2012 — 2019",
+  },
+  {
+    name: "Game jams",
+    description: {
+      es: "MIO (finalista, Idea Game Jam 2018) como programador, artista 2D y sonido, más 2 jams como pixel artist.",
+      en: "MIO (finalist, Idea Game Jam 2018) as programmer, 2D artist and sound, plus 2 jams as pixel artist.",
+    },
+  },
+  {
+    name: "RESA — Francesc Giralt i Serra",
+    description: {
+      es: "Coordinador de actividades en la residencia universitaria de Terrassa.",
+      en: "Activities coordinator at the university residence in Terrassa.",
+    },
+    period: "2017 — 2019",
+  },
+];
+
+export const experience: { role: L; org: string; period: L; description: L }[] = [
+  {
+    role: { es: "Head of Studio", en: "Head of Studio" },
     org: "Blackmouth Games",
-    period: "2020 — 2025",
-    description:
-      "Liderazgo de estudio y producción de Domenation (Time Defenders), Zodiak y proyectos Web3/multiplayer.",
+    period: { es: "2020 — 2025", en: "2020 — 2025" },
+    description: {
+      es: "Liderazgo del estudio y producción de Domenation (Time Defenders), Zodiak y proyectos multijugador y Web3: equipos compactos, outsourcing y roadmap de producto.",
+      en: "Studio leadership and production of Domenation (Time Defenders), Zodiak and multiplayer/Web3 projects: compact teams, outsourcing and product roadmap.",
+    },
   },
   {
-    role: "Solo Dev & Founder",
+    role: { es: "Solo Dev & Founder", en: "Solo Dev & Founder" },
     org: "LayerSuite · XCarbon",
-    period: "2025 — hoy",
-    description:
-      "Desarrollo end-to-end de producto: SaaS de gestión para impresión 3D y plataforma de créditos de carbono.",
+    period: { es: "2023 — hoy", en: "2023 — now" },
+    description: {
+      es: "Producto end-to-end: SaaS de gestión para impresión 3D y plataforma de créditos de carbono Web3.",
+      en: "End-to-end product: management SaaS for 3D printing and a Web3 carbon credits platform.",
+    },
   },
   {
-    role: "Multitask / Operaciones",
+    role: { es: "Multitask / Operaciones", en: "Multitask / Operations" },
     org: "Jardiper & LIETT Iberica",
-    period: "Desde siempre",
-    description:
-      "Vivero, planta de compostaje y granjas familiares: operaciones, digitalización y atención al cliente.",
+    period: { es: "Desde siempre", en: "Always" },
+    description: {
+      es: "Vivero, planta de compostaje y granjas familiares: decisiones, operaciones, maquinaria, IT y atención al cliente.",
+      en: "Nursery, composting plant and family farms: decision making, operations, machinery, IT and customer service.",
+    },
   },
 ];
 
-export const education = [
-  "Specialist in Artificial Intelligence — Racks Academy",
-  "Máster en Mercados Financieros",
-  "MBA + Project Management",
-  "Playstation Talents",
-  "Grado en Diseño y Desarrollo de Videojuegos",
+export const education: { title: L; org: string; period: L; note?: L }[] = [
+  {
+    title: {
+      es: "Máster en Mercados Financieros y Gestión de Activos",
+      en: "Master's Degree in Financial Markets and Asset Management",
+    },
+    org: "ENEB",
+    period: { es: "Jul. 2026 — actualidad · Remoto", en: "Jul. 2026 — present · Remote" },
+  },
+  {
+    title: {
+      es: "Máster en MBA + Project Management",
+      en: "Master's Degree in MBA + Project Management",
+    },
+    org: "ENEB",
+    period: { es: "Oct. 2025 — actualidad · Remoto", en: "Oct. 2025 — present · Remote" },
+  },
+  {
+    title: {
+      es: "Especialista en Inteligencia Artificial",
+      en: "Specialist in Artificial Intelligence",
+    },
+    org: "Racks Academy",
+    period: { es: "Oct. 2024 — Dic. 2025 · Remoto", en: "Oct. 2024 — Dec. 2025 · Remote" },
+  },
+  {
+    title: {
+      es: "Máster en Marketing, Comunicación y Gestión de Proyectos de Videojuegos",
+      en: "Master's Degree in Marketing, Communication and Videogame Project Management",
+    },
+    org: "Voxel School & UCM — PlayStation Talents",
+    period: { es: "Oct. 2019 — Sep. 2020 · Madrid", en: "Oct. 2019 — Sep. 2020 · Madrid" },
+    note: { es: "Matrícula de honor (10)", en: "Graduated with honors (10)" },
+  },
+  {
+    title: {
+      es: "Grado en Diseño y Desarrollo de Videojuegos",
+      en: "Bachelor's Degree in Video Game Design and Development",
+    },
+    org: "Centre de la Imatge i la Tecnologia Multimèdia (UPC)",
+    period: { es: "Sep. 2015 — Jun. 2019 · Terrassa", en: "Sep. 2015 — Jun. 2019 · Terrassa" },
+  },
+  {
+    title: {
+      es: "Técnico Superior en Telecomunicaciones y Sistemas Informáticos",
+      en: "Higher Technician in Telecommunications and Computer Systems",
+    },
+    org: "INS Pere Martell",
+    period: { es: "Sep. 2013 — Jun. 2015 · Tarragona", en: "Sep. 2013 — Jun. 2015 · Tarragona" },
+    note: { es: "3er premio Trabajo de Investigación REPSOL YPF (2014)", en: "3rd prize, REPSOL YPF research award (2014)" },
+  },
+];
+
+export const languages: { name: L; level: L }[] = [
+  { name: { es: "Español", en: "Spanish" }, level: { es: "Nativo", en: "Native" } },
+  { name: { es: "Catalán", en: "Catalan" }, level: { es: "Bilingüe", en: "Bilingual" } },
+  {
+    name: { es: "Inglés", en: "English" },
+    level: { es: "Intermedio alto", en: "Upper intermediate" },
+  },
 ];
 
 export const skills = [
@@ -175,10 +418,10 @@ export const skills = [
   "React",
   "TypeScript",
   "SQL",
+  "C# / C++",
   "AI tools (Cursor, Lovable, GPT)",
-  "Jira",
-  "Notion",
-  "AWS",
+  "Jira · Trello · Notion",
+  "AWS · Railway · Supabase",
   "Web3 / Blockchain",
   "Product & Team Leadership",
   "Impresión 3D",

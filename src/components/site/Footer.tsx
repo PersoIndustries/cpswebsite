@@ -1,13 +1,16 @@
 import { Linkedin, Mail } from "lucide-react";
 import { nav, profile } from "@/data/site";
+import { useLang } from "@/lib/i18n";
 
 export function Footer() {
+  const { t } = useLang();
+
   return (
     <footer className="border-t border-border">
       <div className="mx-auto grid w-full max-w-6xl gap-8 px-5 py-12 sm:px-8 md:grid-cols-3">
         <div>
           <p className="text-base font-semibold">{profile.name}</p>
-          <p className="mt-2 max-w-xs text-sm text-muted-foreground">{profile.tagline}</p>
+          <p className="mt-2 max-w-xs text-sm text-muted-foreground">{t(profile.tagline)}</p>
         </div>
         <nav className="grid grid-cols-2 gap-y-2 text-sm md:justify-self-center">
           {nav.map((item) => (
@@ -16,7 +19,7 @@ export function Footer() {
               href={item.href}
               className="text-muted-foreground transition-colors hover:text-foreground"
             >
-              {item.label}
+              {t(item.label)}
             </a>
           ))}
         </nav>
