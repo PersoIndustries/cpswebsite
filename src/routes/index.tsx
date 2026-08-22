@@ -1,16 +1,22 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
 import { Hero } from "@/components/site/Hero";
-import { Tools } from "@/components/site/Tools";
 import { Companies } from "@/components/site/Companies";
+import { Web3 } from "@/components/site/Web3";
 import { Games } from "@/components/site/Games";
+import { Printing } from "@/components/site/Printing";
+import { Queue } from "@/components/site/Queue";
+import { OtherProjects } from "@/components/site/OtherProjects";
 import { About } from "@/components/site/About";
+import { Tools } from "@/components/site/Tools";
 import { Contact } from "@/components/site/Contact";
 import { Footer } from "@/components/site/Footer";
+import { ParallaxBackground } from "@/components/site/ParallaxBackground";
+import { LanguageProvider } from "@/lib/i18n";
 
-const title = "Carlos Peralta Sorolla | Games · Tech · Agriculture · AI";
+const title = "Carlos Peralta Sorolla | Games · Tech · Web3 · Agriculture";
 const description =
-  "Web personal de Carlos Peralta Sorolla (Perso_Dev): CV, tools, empresas y apps (Jardiper, LayerSuite, XCarbon) y proyectos de game dev.";
+  "Web personal de Carlos Peralta Sorolla (Perso_Dev): CV, empresas y apps (Jardiper, LayerSuite, XCarbon), proyectos Web3, game dev, impresión 3D bajo pedido y tools.";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -37,7 +43,12 @@ export const Route = createFileRoute("/")({
           alternateName: "Perso_Dev",
           jobTitle: "Game & Product Developer",
           email: "carlosperaltasorolla@gmail.com",
-          address: { "@type": "PostalAddress", addressLocality: "Fraga", addressRegion: "Huesca", addressCountry: "ES" },
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Fraga",
+            addressRegion: "Huesca",
+            addressCountry: "ES",
+          },
           sameAs: [
             "https://www.linkedin.com/in/carlos-peralta-sorolla",
             "https://x.com/perso_dev",
@@ -51,17 +62,24 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <Header />
-      <main>
-        <Hero />
-        <Tools />
-        <Companies />
-        <Games />
-        <About />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <LanguageProvider>
+      <div className="relative min-h-screen bg-background text-foreground">
+        <ParallaxBackground />
+        <Header />
+        <main>
+          <Hero />
+          <Companies />
+          <Web3 />
+          <Games />
+          <Printing />
+          <Queue />
+          <OtherProjects />
+          <About />
+          <Tools />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
+    </LanguageProvider>
   );
 }
