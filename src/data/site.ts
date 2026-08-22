@@ -359,8 +359,8 @@ export const experience: { role: L; org: string; period: L; description: L }[] =
     org: "Blackmouth Games",
     period: { es: "2020 — 2025", en: "2020 — 2025" },
     description: {
-      es: "Liderazgo del estudio y producción de Domenation (Time Defenders), Zodiak y proyectos multijugador y Web3: equipos compactos, outsourcing y roadmap de producto.",
-      en: "Studio leadership and production of Domenation (Time Defenders), Zodiak and multiplayer/Web3 projects: compact teams, outsourcing and product roadmap.",
+      es: "Liderazgo del estudio y producción de Domenation, Domenation: Time Defenders, Zodiak y otros proyectos multijugador y Web3: equipos compactos, outsourcing y roadmap de producto.",
+      en: "Studio leadership and production of Domenation, Domenation: Time Defenders, Zodiak and other multiplayer/Web3 projects: compact teams, outsourcing and product roadmap.",
     },
   },
   {
@@ -374,7 +374,7 @@ export const experience: { role: L; org: string; period: L; description: L }[] =
   },
   {
     role: { es: "Multitask / Operaciones", en: "Multitask / Operations" },
-    org: "Jardiper & LIETT Iberica",
+    org: "Jardiper & LIETT IBERICA",
     period: { es: "Desde siempre", en: "Always" },
     description: {
       es: "Vivero y planta de compostaje familiares: decisiones, operaciones, maquinaria, IT y atención al cliente.",
