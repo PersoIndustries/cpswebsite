@@ -4,11 +4,8 @@
 
 [build.environment]
   NODE_VERSION = "22"
-  # Hace que Nitro (TanStack Start) compile para Netlify Functions en vez de Cloudflare
+  # Compila el servidor de TanStack Start (Nitro) como Netlify Function
   NITRO_PRESET = "netlify"
-
-[functions]
-  node_bundler = "none"
 
 # Cabeceras de seguridad básicas
 [[headers]]
@@ -18,7 +15,7 @@
     X-Frame-Options = "SAMEORIGIN"
     Referrer-Policy = "strict-origin-when-cross-origin"
 
-# Cache largo para assets con hash
+# Cache largo para los assets con hash generados por Vite
 [[headers]]
   for = "/_build/*"
   [headers.values]
