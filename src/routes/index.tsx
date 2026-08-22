@@ -30,10 +30,16 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "profile" },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: siteUrl },
+      { property: "og:image", content: ogImage },
+      { property: "og:image:width", content: "800" },
+      { property: "og:image:height", content: "800" },
+      { property: "og:image:alt", content: "Carlos Peralta Sorolla (PERSO)" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: ogImage },
       { name: "twitter:title", content: title },
       { name: "twitter:description", content: description },
+
     ],
     links: [{ rel: "canonical", href: "/" }],
     scripts: [
