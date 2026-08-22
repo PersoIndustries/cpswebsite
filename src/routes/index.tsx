@@ -39,9 +39,8 @@ export const Route = createFileRoute("/")({
       { name: "twitter:image", content: ogImage },
       { name: "twitter:title", content: title },
       { name: "twitter:description", content: description },
-
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: siteUrl + "/" }],
     scripts: [
       {
         type: "application/ld+json",
@@ -49,7 +48,10 @@ export const Route = createFileRoute("/")({
           "@context": "https://schema.org",
           "@type": "Person",
           name: "Carlos Peralta Sorolla",
+          image: ogImage,
+          url: siteUrl,
           alternateName: ["PERSO", "Perso_Dev"],
+
           jobTitle: "Project Manager & Product Developer",
           email: "carlosperaltasorolla@gmail.com",
           address: {
