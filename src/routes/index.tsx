@@ -9,6 +9,7 @@ import { About } from "@/components/site/About";
 import { Tools } from "@/components/site/Tools";
 import { Contact } from "@/components/site/Contact";
 import { Footer } from "@/components/site/Footer";
+import { CookieBanner } from "@/components/site/CookieBanner";
 import { ParallaxBackground } from "@/components/site/ParallaxBackground";
 import { LanguageProvider } from "@/lib/i18n";
 
@@ -76,6 +77,7 @@ function Index() {
           <Contact />
         </main>
         <Footer />
+        <CookieBanner />
       </div>
     </LanguageProvider>
   );
