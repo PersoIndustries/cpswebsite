@@ -12,10 +12,14 @@ import { Footer } from "@/components/site/Footer";
 import { CookieBanner } from "@/components/site/CookieBanner";
 import { ParallaxBackground } from "@/components/site/ParallaxBackground";
 import { LanguageProvider } from "@/lib/i18n";
+import carlosImg from "@/assets/carlos.jpg.asset.json";
 
 const title = "Carlos Peralta Sorolla (PERSO) — Project Manager & Dev";
 const description =
   "Carlos Peralta Sorolla (PERSO), project manager y desarrollador: CV, empresas y apps (Jardiper, LayerSuite, XCarbon), game dev, Web3, impresión 3D bajo pedido y tools.";
+const siteUrl = "https://project--46d4e489-763f-4444-acff-d9924defb6f3.lovable.app";
+const ogImage = `${siteUrl}${carlosImg.url}`;
+
 
 export const Route = createFileRoute("/")({
   component: Index,
