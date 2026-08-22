@@ -19,7 +19,11 @@ export function OtherProjects() {
           return (
             <li key={item.name}>
               <Wrapper
-                {...(item.href ? { href: item.href, target: "_blank", rel: "noreferrer" } : {})}
+                {...(item.href
+                  ? item.href.startsWith("http")
+                    ? { href: item.href, target: "_blank", rel: "noreferrer" }
+                    : { href: item.href }
+                  : {})}
                 className="surface-card group flex h-full flex-col p-5"
               >
                 <div className="flex items-center gap-2">

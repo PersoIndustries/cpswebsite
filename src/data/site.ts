@@ -218,30 +218,6 @@ export const games: { name: string; role: L; description: L; href: string }[] = 
   },
 ];
 
-export const printing: { title: L; description: L }[] = [
-  {
-    title: { es: "Impresión FDM bajo pedido", en: "FDM printing on demand" },
-    description: {
-      es: "Piezas funcionales, recambios, prototipos y regalos personalizados impresos en FDM.",
-      en: "Functional parts, spares, prototypes and custom gifts printed with FDM.",
-    },
-  },
-  {
-    title: { es: "Impresión técnica", en: "Technical printing" },
-    description: {
-      es: "Materiales de ingeniería: ABS, ASA, PA, fibra de vidrio y fibra de carbono para piezas exigentes.",
-      en: "Engineering materials: ABS, ASA, PA, glass fibre and carbon fibre for demanding parts.",
-    },
-  },
-  {
-    title: { es: "Diseño y adaptación 3D", en: "3D design & adaptation" },
-    description: {
-      es: "Modelado desde cero o adaptación de un STL existente para que encaje y se imprima bien.",
-      en: "Modelling from scratch or adapting an existing STL so it fits and prints properly.",
-    },
-  },
-];
-
 export const queue: { name: string; icon: string; description: L }[] = [
   {
     name: "Libro de campo para tu huerto",
