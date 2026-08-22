@@ -360,8 +360,8 @@ export const experience: { role: L; org: string; period: L; description: L }[] =
     org: "Blackmouth Games",
     period: { es: "2020 — 2025", en: "2020 — 2025" },
     description: {
-      es: "Liderazgo del estudio y producción de Domenation, Domenation: Time Defenders, Zodiak y otros proyectos multijugador y Web3: equipos compactos, outsourcing y roadmap de producto.",
-      en: "Studio leadership and production of Domenation, Domenation: Time Defenders, Zodiak and other multiplayer/Web3 projects: compact teams, outsourcing and product roadmap.",
+      es: "Liderazgo del estudio y producción de Domenation, Domenation: Time Defenders, Zodiak y otros proyectos multijugador y Web3: equipos de 20-50 personas + outsourcing y roadmap de producto.",
+      en: "Studio leadership and production of Domenation, Domenation: Time Defenders, Zodiak and other multiplayer/Web3 projects: 20-50 people teams + outsourcing and product roadmap.",
     },
   },
   {
