@@ -1,4 +1,4 @@
-import { Linkedin, Mail } from "lucide-react";
+import { Instagram, Linkedin, Mail } from "lucide-react";
 import { nav, profile } from "@/data/site";
 import { useLang } from "@/lib/i18n";
 
@@ -43,6 +43,15 @@ export function Footer() {
             X
           </a>
           <a
+            href={profile.instagram}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Instagram"
+            className="grid size-9 place-items-center rounded-lg border border-border transition-colors hover:border-emerald-accent hover:text-emerald-accent"
+          >
+            <Instagram className="size-4" />
+          </a>
+          <a
             href={`mailto:${profile.email}`}
             aria-label="Email"
             className="grid size-9 place-items-center rounded-lg border border-border transition-colors hover:border-emerald-accent hover:text-emerald-accent"
@@ -52,7 +61,7 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-border py-5 text-center text-xs text-muted-foreground">
-        © {new Date().getFullYear()} {profile.name} · Perso_Dev
+        © {new Date().getFullYear()} {profile.name} · PERSO
       </div>
     </footer>
   );

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ArrowRight, Linkedin, MapPin, Sparkles } from "lucide-react";
+import { ArrowRight, Instagram, Linkedin, MapPin, Sparkles } from "lucide-react";
 import { profile } from "@/data/site";
 import { Button } from "@/components/ui/button";
 import { useLang, ui } from "@/lib/i18n";

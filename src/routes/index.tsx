@@ -12,9 +12,9 @@ import { Footer } from "@/components/site/Footer";
 import { ParallaxBackground } from "@/components/site/ParallaxBackground";
 import { LanguageProvider } from "@/lib/i18n";
 
-const title = "Carlos Peralta Sorolla | Games · Tech · Web3 · Agriculture";
+const title = "Carlos Peralta Sorolla (PERSO) — Project Manager & Dev";
 const description =
-  "Web personal de Carlos Peralta Sorolla (Perso_Dev): CV, empresas y apps (Jardiper, LayerSuite, XCarbon), proyectos Web3, game dev, impresión 3D bajo pedido y tools.";
+  "Carlos Peralta Sorolla (PERSO), project manager y desarrollador: CV, empresas y apps (Jardiper, LayerSuite, XCarbon), game dev, Web3, impresión 3D bajo pedido y tools.";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -38,8 +38,8 @@ export const Route = createFileRoute("/")({
           "@context": "https://schema.org",
           "@type": "Person",
           name: "Carlos Peralta Sorolla",
-          alternateName: "Perso_Dev",
-          jobTitle: "Game & Product Developer",
+          alternateName: ["PERSO", "Perso_Dev"],
+          jobTitle: "Project Manager & Product Developer",
           email: "carlosperaltasorolla@gmail.com",
           address: {
             "@type": "PostalAddress",
@@ -50,6 +50,7 @@ export const Route = createFileRoute("/")({
           sameAs: [
             "https://www.linkedin.com/in/carlos-peralta-sorolla",
             "https://x.com/perso_dev",
+            "https://www.instagram.com/pers0",
             "https://www.jardiper.es/",
           ],
         }),
