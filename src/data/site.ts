@@ -114,11 +114,11 @@ export const companies: {
     status: { es: "Activo", en: "Active" },
   },
   {
-    name: "LIETT Iberica",
+    name: "LIETT IBERICA",
     icon: "Recycle",
     description: {
-      es: "Planta de compostaje y agricultura familiar: operaciones, maquinaria e IT.",
-      en: "Family composting plant and agriculture: operations, machinery and IT.",
+      es: "Planta de compostaje y agricultura familiar.",
+      en: "Family composting plant and agriculture.",
     },
     href: "#liett",
     status: { es: "Activo", en: "Active" },
@@ -127,8 +127,8 @@ export const companies: {
     name: "Layer Suite",
     icon: "Layers",
     description: {
-      es: "Plataforma de gestión especializada para negocios de impresión 3D.",
-      en: "Management platform built for 3D printing businesses.",
+      es: "SaaS, plataforma de gestión especializada para negocios de impresión 3D.",
+      en: "SaaS, management platform built for 3D printing businesses.",
     },
     href: "#layersuite",
     status: { es: "WIP", en: "WIP" },
@@ -137,8 +137,8 @@ export const companies: {
     name: "XCarbon.io",
     icon: "Leaf",
     description: {
-      es: "SaaS para plantas de compostaje + créditos de carbono Web3 y marketplace.",
-      en: "SaaS for composting plants + Web3 carbon credits and marketplace.",
+      es: "SaaS para plantas de compostaje + (to do) créditos de carbono Web3 y marketplace.",
+      en: "SaaS for composting plants + (to do) Web3 carbon credits and marketplace.",
     },
     href: "#xcarbon",
     status: { es: "WIP", en: "WIP" },
@@ -182,13 +182,22 @@ export const web3: { name: string; icon: string; description: L }[] = [
 
 export const games: { name: string; role: L; description: L; href: string }[] = [
   {
-    name: "Domenation (Time Defenders)",
+    name: "Domenation",
     role: { es: "Head of Studio — Blackmouth Games", en: "Head of Studio — Blackmouth Games" },
     description: {
-      es: "Shooter multijugador de PC a gran escala, con ecosistema Web3 (token, NFTs y dApp).",
-      en: "Large-scale multiplayer PC shooter with a Web3 ecosystem (token, NFTs and dApp).",
+      es: "Shooter multijugador de PC a gran escala (2023 — 2025), con ecosistema Web3: web, dApp, token y NFTs.",
+      en: "Large-scale multiplayer PC shooter (2023 — 2025) with a Web3 ecosystem: web, dApp, token and NFTs.",
     },
     href: "#domenation",
+  },
+  {
+    name: "Domenation: Time Defenders",
+    role: { es: "Head of Studio — Blackmouth Games", en: "Head of Studio — Blackmouth Games" },
+    description: {
+      es: "Tower defence en Telegram dentro del universo Domenation (2024 — 2025): dirección de producto, UX y economía.",
+      en: "Telegram tower defence set in the Domenation universe (2024 — 2025): product direction, UX and economy design.",
+    },
+    href: "#time-defenders",
   },
   {
     name: "Zodiak",
@@ -207,15 +216,6 @@ export const games: { name: string; role: L; description: L; href: string }[] = 
       en: "Multiplayer PC game: fast action and competition.",
     },
     href: "#hitnrush",
-  },
-  {
-    name: "Mitico",
-    role: { es: "Producer / Product", en: "Producer / Product" },
-    description: {
-      es: "Proyecto de entretenimiento, Web3 y streaming deportivo.",
-      en: "Entertainment project mixing Web3 and sports streaming.",
-    },
-    href: "#mitico",
   },
   {
     name: "Necrognomicon",
@@ -306,11 +306,19 @@ export const otherProjects: { name: string; description: L; href?: string; perio
     href: "https://www.jardiper.es/",
   },
   {
-    name: "LIETT Iberica",
+    name: "LIETT IBERICA",
     description: {
-      es: "Web corporativa de la planta de compostaje y agricultura.",
-      en: "Corporate website for the composting and agriculture business.",
+      es: "Web corporativa de la planta de compostaje y agricultura, además del desarrollo de los anexos y la integración con XCarbon.io.",
+      en: "Corporate website for the composting and agriculture business, plus development of the XCarbon.io annexes and integration.",
     },
+  },
+  {
+    name: "Mitico",
+    description: {
+      es: "Proyecto de entretenimiento, Web3 y streaming deportivo (OTT) en fases iniciales: business plan, idea, plan financiero y primeros pasos de producto.",
+      en: "Entertainment, Web3 and sports streaming (OTT) project at early stages: business plan, idea creation, financial plan and first product steps.",
+    },
+    period: "2023",
   },
   {
     name: "Predictive Sport Drive (PSD)",
