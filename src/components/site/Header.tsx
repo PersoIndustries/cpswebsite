@@ -60,7 +60,7 @@ export function Header() {
             <a
               key={item.href}
               href={item.href}
-              className="relative rounded-md px-2.5 py-2 text-sm text-muted-foreground transition-colors hover:text-foreground after:absolute after:inset-x-2.5 after:bottom-1 after:h-px after:origin-left after:scale-x-0 after:bg-emerald-accent after:transition-transform hover:after:scale-x-100"
+              className="relative whitespace-nowrap rounded-md px-2 py-2 text-[13px] text-muted-foreground transition-colors hover:text-foreground after:absolute after:inset-x-2 after:bottom-1 after:h-px after:origin-left after:scale-x-0 after:bg-emerald-accent after:transition-transform hover:after:scale-x-100"
             >
               {t(item.label)}
             </a>
