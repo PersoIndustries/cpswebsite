@@ -54,12 +54,6 @@ export const ui = {
     en: "From the family nursery to SaaS: projects mixing land, technology and product.",
   },
 
-  web3Eyebrow: { es: "Blockchain", en: "Blockchain" },
-  web3Title: { es: "Web3 & Blockchain", en: "Web3 & Blockchain" },
-  web3Desc: {
-    es: "Cinco años trabajando con tokens, NFTs, dApps y comunidades: producto Web3 aplicado a juegos y a sostenibilidad.",
-    en: "Five years working with tokens, NFTs, dApps and communities: Web3 product applied to games and sustainability.",
-  },
 
   gamesEyebrow: { es: "Game dev", en: "Game dev" },
   gamesTitle: { es: "Juegos & Game Dev", en: "Games & Game Dev" },
@@ -68,13 +62,6 @@ export const ui = {
     en: "Production, studio leadership and development on multiplayer, Web3 and academic titles.",
   },
 
-  printEyebrow: { es: "Servicio", en: "Service" },
-  printTitle: { es: "Impresión 3D — acepto pedidos", en: "3D Printing — taking orders" },
-  printDesc: {
-    es: "Diseño e imprimo piezas a medida. Cuéntame qué necesitas y te paso presupuesto sin compromiso.",
-    en: "I design and print custom parts. Tell me what you need and I'll send a free quote.",
-  },
-  printCta: { es: "Pedir presupuesto", en: "Request a quote" },
 
   queueEyebrow: { es: "Roadmap", en: "Roadmap" },
   queueTitle: { es: "Proyectos en cola", en: "Projects in the pipeline" },
@@ -100,6 +87,7 @@ export const ui = {
   keyExperience: { es: "Experiencia clave", en: "Key experience" },
   educationTitle: { es: "Educación", en: "Education" },
   skillsTitle: { es: "Skills", en: "Skills" },
+  mindsetTitle: { es: "Mindset", en: "Mindset" },
   languagesTitle: { es: "Idiomas", en: "Languages" },
 
   toolsEyebrow: { es: "Tools", en: "Tools" },
