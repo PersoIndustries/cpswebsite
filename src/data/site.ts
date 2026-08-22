@@ -4,10 +4,10 @@ export type L = { es: string; en: string };
 
 export const profile = {
   name: "Carlos Peralta Sorolla",
-  alias: "Perso_Dev",
+  alias: "PERSO",
   tagline: {
-    es: "Creative & Hands-on | Games · Tech · Web3 · Agriculture",
-    en: "Creative & Hands-on | Games · Tech · Web3 · Agriculture",
+    es: "Project Manager · Creative & Hands-on | Games · Tech · Web3 · Agriculture",
+    en: "Project Manager · Creative & Hands-on | Games · Tech · Web3 · Agriculture",
   } satisfies L,
   intro: {
     es: "Hola, soy Carlos. Persona creativa y proactiva, con buen trato con la gente y actitud hands-on. Empecé muy joven en los negocios familiares (vivero y planta de compostaje). He sido Head of Studio en Blackmouth Games, liderando Domenation y varios proyectos multijugador y Web3. Hoy desarrollo mis propios productos (LayerSuite, XCarbon), imprimo en 3D bajo pedido y sigo formándome con dos másteres.",
@@ -25,14 +25,15 @@ export const profile = {
   } satisfies L,
   linkedin: "https://www.linkedin.com/in/carlos-peralta-sorolla",
   x: "https://x.com/perso_dev",
+  instagram: "https://www.instagram.com/pers0",
 };
 
 export const nav: { label: L; href: string }[] = [
   { label: { es: "Inicio", en: "Home" }, href: "#inicio" },
-  { label: { es: "Sobre mí / CV", en: "About / CV" }, href: "#sobre-mi" },
   { label: { es: "Empresas & Apps", en: "Companies & Apps" }, href: "#empresas" },
   { label: { es: "Juegos", en: "Games" }, href: "#juegos" },
   { label: { es: "En cola", en: "In the pipeline" }, href: "#en-cola" },
+  { label: { es: "Sobre mí / CV", en: "About / CV" }, href: "#sobre-mi" },
   { label: { es: "Otros proyectos", en: "Other projects" }, href: "#otros" },
   { label: { es: "Tools", en: "Tools" }, href: "#tools" },
   { label: { es: "Contacto", en: "Contact" }, href: "#contacto" },
