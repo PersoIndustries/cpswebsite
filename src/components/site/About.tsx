@@ -1,5 +1,5 @@
 import { GraduationCap, Briefcase, Languages } from "lucide-react";
-import { education, experience, languages, skills } from "@/data/site";
+import { education, experience, languages, mindset, skills } from "@/data/site";
 import { useLang, ui } from "@/lib/i18n";
 import { Section } from "./Section";
 
@@ -46,6 +46,20 @@ export function About() {
                 className="rounded-full border border-border bg-card px-3 py-1.5 text-sm text-muted-foreground transition-all hover:-translate-y-0.5 hover:border-emerald-accent hover:text-foreground"
               >
                 {skill}
+              </li>
+            ))}
+          </ul>
+
+          <h3 className="mt-10 text-sm font-semibold uppercase tracking-widest text-muted-foreground">
+            {t(ui.mindsetTitle)}
+          </h3>
+          <ul className="mt-4 flex flex-wrap gap-2">
+            {mindset.map((item) => (
+              <li
+                key={item.es}
+                className="rounded-full border border-dashed border-border bg-card px-3 py-1.5 text-sm text-muted-foreground transition-all hover:-translate-y-0.5 hover:border-blue-accent hover:text-foreground"
+              >
+                {t(item)}
               </li>
             ))}
           </ul>
