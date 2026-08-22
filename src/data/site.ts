@@ -403,8 +403,8 @@ export const education: { title: L; org: string; period: L; note?: L }[] = [
   },
   {
     title: {
-      es: "Especialista en Inteligencia Artificial",
-      en: "Specialist in Artificial Intelligence",
+      es: "Master Specialist in Artificial Intelligence",
+      en: "Master Specialist in Artificial Intelligence",
     },
     org: "Racks Academy",
     period: { es: "Oct. 2024 — Dic. 2025 · Remoto", en: "Oct. 2024 — Dec. 2025 · Remote" },
