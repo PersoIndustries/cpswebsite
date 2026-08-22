@@ -1,24 +1,67 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Header } from "@/components/site/Header";
+import { Hero } from "@/components/site/Hero";
+import { Tools } from "@/components/site/Tools";
+import { Companies } from "@/components/site/Companies";
+import { Games } from "@/components/site/Games";
+import { About } from "@/components/site/About";
+import { Contact } from "@/components/site/Contact";
+import { Footer } from "@/components/site/Footer";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+const title = "Carlos Peralta Sorolla | Games · Tech · Agriculture · AI";
+const description =
+  "Web personal de Carlos Peralta Sorolla (Perso_Dev): CV, tools, empresas y apps (Jardiper, LayerSuite, XCarbon) y proyectos de game dev.";
+
 export const Route = createFileRoute("/")({
   component: Index,
+  head: () => ({
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "profile" },
+      { property: "og:url", content: "/" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: title },
+      { name: "twitter:description", content: description },
+    ],
+    links: [{ rel: "canonical", href: "/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: "Carlos Peralta Sorolla",
+          alternateName: "Perso_Dev",
+          jobTitle: "Game & Product Developer",
+          email: "carlosperaltasorolla@gmail.com",
+          address: { "@type": "PostalAddress", addressLocality: "Fraga", addressRegion: "Huesca", addressCountry: "ES" },
+          sameAs: [
+            "https://www.linkedin.com/in/carlos-peralta-sorolla",
+            "https://x.com/perso_dev",
+            "https://www.jardiper.es/",
+          ],
+        }),
+      },
+    ],
+  }),
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen bg-background text-foreground">
+      <Header />
+      <main>
+        <Hero />
+        <Tools />
+        <Companies />
+        <Games />
+        <About />
+        <Contact />
+      </main>
+      <Footer />
     </div>
   );
 }
