@@ -1,6 +1,6 @@
 import { Instagram, Linkedin, Mail } from "lucide-react";
 import { nav, profile } from "@/data/site";
-import { useLang } from "@/lib/i18n";
+import { useLang, ui } from "@/lib/i18n";
 
 export function Footer() {
   const { t } = useLang();
@@ -61,7 +61,10 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-border py-5 text-center text-xs text-muted-foreground">
-        © {new Date().getFullYear()} {profile.name} · PERSO
+        © {new Date().getFullYear()} {profile.name} · PERSO ·{" "}
+        <a href="/cookies" className="underline-offset-4 hover:text-foreground hover:underline">
+          {t(ui.cookieMore)}
+        </a>
       </div>
     </footer>
   );

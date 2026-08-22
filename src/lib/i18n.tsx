@@ -110,4 +110,18 @@ export const ui = {
   formMessagePh: { es: "Cuéntame en qué puedo ayudarte…", en: "Tell me how I can help…" },
   formSend: { es: "Enviar mensaje", en: "Send message" },
   webSubject: { es: "Contacto web", en: "Website contact" },
+
+  cookieTitle: { es: "Cookies", en: "Cookies" },
+  cookieText: {
+    es: "Esta web solo usa almacenamiento local técnico para recordar tu idioma y tu tema (claro/oscuro). No hay cookies de publicidad ni de seguimiento.",
+    en: "This site only uses technical local storage to remember your language and theme (light/dark). No advertising or tracking cookies.",
+  },
+  cookieAccept: { es: "Entendido", en: "Got it" },
+  cookieMore: { es: "Política de cookies", en: "Cookie policy" },
+  cookiePolicyTitle: { es: "Política de cookies", en: "Cookie policy" },
+  cookiePolicyDesc: {
+    es: "Cómo se usan las cookies y el almacenamiento local en esta web.",
+    en: "How cookies and local storage are used on this website.",
+  },
+  backHome: { es: "Volver al inicio", en: "Back to home" },
 } satisfies Record<string, L>;
