@@ -10,8 +10,8 @@ export const profile = {
     en: "Creative & Hands-on | Games · Tech · Web3 · Agriculture",
   } satisfies L,
   intro: {
-    es: "Hola, soy Carlos. Persona creativa y proactiva, con buen trato con la gente y actitud hands-on. Empecé muy joven en los negocios familiares (vivero, planta de compostaje y granjas). He sido Head of Studio en Blackmouth Games, liderando Domenation y varios proyectos multijugador y Web3. Hoy desarrollo mis propios productos (LayerSuite, XCarbon), imprimo en 3D bajo pedido y sigo formándome con dos másteres.",
-    en: "Hi, I'm Carlos. A creative, proactive person with strong people skills and a hands-on attitude. I started young in my family's businesses (nursery, composting plant and farms). I was Head of Studio at Blackmouth Games, leading Domenation and several multiplayer and Web3 projects. Today I build my own products (LayerSuite, XCarbon), run a 3D printing service and I'm studying two master's degrees.",
+    es: "Hola, soy Carlos. Persona creativa y proactiva, con buen trato con la gente y actitud hands-on. Empecé muy joven en los negocios familiares (vivero y planta de compostaje). He sido Head of Studio en Blackmouth Games, liderando Domenation y varios proyectos multijugador y Web3. Hoy desarrollo mis propios productos (LayerSuite, XCarbon), imprimo en 3D bajo pedido y sigo formándome con dos másteres.",
+    en: "Hi, I'm Carlos. A creative, proactive person with strong people skills and a hands-on attitude. I started young in my family's businesses (nursery and composting plant). I was Head of Studio at Blackmouth Games, leading Domenation and several multiplayer and Web3 projects. Today I build my own products (LayerSuite, XCarbon), run a 3D printing service and I'm studying two master's degrees.",
   } satisfies L,
   now: {
     es: "Ahora mismo: LayerSuite y XCarbon, impresión 3D bajo pedido, apoyo en los negocios familiares y dos másteres en marcha (MBA + Project Management y Mercados Financieros & Gestión de Activos).",
@@ -31,9 +31,7 @@ export const nav: { label: L; href: string }[] = [
   { label: { es: "Inicio", en: "Home" }, href: "#inicio" },
   { label: { es: "Sobre mí / CV", en: "About / CV" }, href: "#sobre-mi" },
   { label: { es: "Empresas & Apps", en: "Companies & Apps" }, href: "#empresas" },
-  { label: { es: "Web3", en: "Web3" }, href: "#web3" },
   { label: { es: "Juegos", en: "Games" }, href: "#juegos" },
-  { label: { es: "Impresión 3D", en: "3D Printing" }, href: "#impresion-3d" },
   { label: { es: "En cola", en: "In the pipeline" }, href: "#en-cola" },
   { label: { es: "Otros proyectos", en: "Other projects" }, href: "#otros" },
   { label: { es: "Tools", en: "Tools" }, href: "#tools" },
@@ -101,8 +99,8 @@ export const companies: {
     name: "Layer Suite",
     icon: "Layers",
     description: {
-      es: "Plataforma de gestión especializada para negocios de impresión 3D. Stack: React, SQL, Stripe.",
-      en: "Management platform built for 3D printing businesses. Stack: React, SQL, Stripe.",
+      es: "Plataforma de gestión especializada para negocios de impresión 3D.",
+      en: "Management platform built for 3D printing businesses.",
     },
     href: "#layersuite",
     status: { es: "WIP", en: "WIP" },
@@ -222,10 +220,17 @@ export const games: { name: string; role: L; description: L; href: string }[] = 
 
 export const printing: { title: L; description: L }[] = [
   {
-    title: { es: "Piezas bajo pedido", en: "Parts on demand" },
+    title: { es: "Impresión FDM bajo pedido", en: "FDM printing on demand" },
     description: {
-      es: "Impresión FDM y resina de piezas funcionales, recambios, prototipos y regalos personalizados.",
-      en: "FDM and resin printing of functional parts, spares, prototypes and custom gifts.",
+      es: "Piezas funcionales, recambios, prototipos y regalos personalizados impresos en FDM.",
+      en: "Functional parts, spares, prototypes and custom gifts printed with FDM.",
+    },
+  },
+  {
+    title: { es: "Impresión técnica", en: "Technical printing" },
+    description: {
+      es: "Materiales de ingeniería: ABS, ASA, PA, fibra de vidrio y fibra de carbono para piezas exigentes.",
+      en: "Engineering materials: ABS, ASA, PA, glass fibre and carbon fibre for demanding parts.",
     },
   },
   {
@@ -233,13 +238,6 @@ export const printing: { title: L; description: L }[] = [
     description: {
       es: "Modelado desde cero o adaptación de un STL existente para que encaje y se imprima bien.",
       en: "Modelling from scratch or adapting an existing STL so it fits and prints properly.",
-    },
-  },
-  {
-    title: { es: "Piezas grandes", en: "Large parts" },
-    description: {
-      es: "Corte y ensamblaje de modelos que no caben en la cama de impresión (con mi tool STL Cutter).",
-      en: "Cutting and assembling models that don't fit the print bed (using my STL Cutter tool).",
     },
   },
 ];
@@ -254,6 +252,14 @@ export const queue: { name: string; icon: string; description: L }[] = [
     },
   },
   {
+    name: "Tower Defence (sin anunciar)",
+    icon: "Castle",
+    description: {
+      es: "Desarrollo de un juego de tower defence todavía sin anunciar. Pronto más detalles.",
+      en: "A tower defence game in development, not announced yet. More details soon.",
+    },
+  },
+  {
     name: "My Ham Radio Museum",
     icon: "Radio",
     description: {
@@ -264,6 +270,21 @@ export const queue: { name: string; icon: string; description: L }[] = [
 ];
 
 export const otherProjects: { name: string; description: L; href?: string; period?: string }[] = [
+  {
+    name: "Web3 & Blockchain",
+    description: {
+      es: "Token, NFTs y dApp de Domenation, créditos de carbono on-chain en XCarbon, mini-juegos Web3 en Telegram, tokenomics y comunidad.",
+      en: "Domenation token, NFTs and dApp, on-chain carbon credits at XCarbon, Telegram Web3 mini-games, tokenomics and community.",
+    },
+  },
+  {
+    name: "Impresión 3D bajo pedido",
+    description: {
+      es: "Servicio de impresión FDM técnica (ABS, ASA, fibra de vidrio y carbono), diseño y adaptación de piezas. Escríbeme para presupuesto.",
+      en: "Technical FDM printing service (ABS, ASA, glass and carbon fibre), part design and adaptation. Message me for a quote.",
+    },
+    href: "#contacto",
+  },
   {
     name: "Eurometales",
     description: {
@@ -344,8 +365,8 @@ export const experience: { role: L; org: string; period: L; description: L }[] =
     org: "Jardiper & LIETT Iberica",
     period: { es: "Desde siempre", en: "Always" },
     description: {
-      es: "Vivero, planta de compostaje y granjas familiares: decisiones, operaciones, maquinaria, IT y atención al cliente.",
-      en: "Nursery, composting plant and family farms: decision making, operations, machinery, IT and customer service.",
+      es: "Vivero y planta de compostaje familiares: decisiones, operaciones, maquinaria, IT y atención al cliente.",
+      en: "Family nursery and composting plant: decision making, operations, machinery, IT and customer service.",
     },
   },
 ];
@@ -391,6 +412,10 @@ export const education: { title: L; org: string; period: L; note?: L }[] = [
     },
     org: "Centre de la Imatge i la Tecnologia Multimèdia (UPC)",
     period: { es: "Sep. 2015 — Jun. 2019 · Terrassa", en: "Sep. 2015 — Jun. 2019 · Terrassa" },
+    note: {
+      es: "Participación en el grupo de investigación PSD — SEAT",
+      en: "Member of the PSD research group — SEAT",
+    },
   },
   {
     title: {
@@ -425,4 +450,17 @@ export const skills = [
   "Web3 / Blockchain",
   "Product & Team Leadership",
   "Impresión 3D",
+];
+
+export const mindset: L[] = [
+  { es: "Sin miedo al éxito", en: "No fear of success" },
+  { es: "Work, grow & repeat", en: "Work, grow & repeat" },
+  { es: "Cuerpo sano, mente sana (CrossFit power)", en: "Healthy body, healthy mind (CrossFit power)" },
+  { es: "Ecología sensata", en: "Sensible ecology" },
+  { es: "Adopción sensata de Web3", en: "Sensible Web3 adoption" },
+  { es: "Adopción sensata de la IA", en: "Sensible AI adoption" },
+  { es: "The best part is no part", en: "The best part is no part" },
+  { es: "Gaming for life", en: "Gaming for life" },
+  { es: "Vivir para trabajar (y disfrutarlo)", en: "Live to work (and enjoy it)" },
+  { es: "Sin horarios de entrada y salida", en: "No clock-in, clock-out" },
 ];
