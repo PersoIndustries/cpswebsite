@@ -66,7 +66,35 @@ export const tools: { name: string; icon: string; description: L; href: string }
     },
     href: "#sql-to-markdown",
   },
+  {
+    name: "Massive Images Renamer",
+    icon: "FileType",
+    description: {
+      es: "Renombra lotes enormes de imágenes con reglas y patrones. 100% local, sin subir nada.",
+      en: "Renames huge batches of images with rules and patterns. 100% local, nothing uploaded.",
+    },
+    href: "#massive-images-renamer",
+  },
+  {
+    name: "Image Multi Converter",
+    icon: "Images",
+    description: {
+      es: "Conversor local de imágenes por lotes entre formatos (PNG, JPG, WebP…).",
+      en: "Local batch image converter between formats (PNG, JPG, WebP…).",
+    },
+    href: "#image-converter",
+  },
+  {
+    name: "PDF Editor (full local)",
+    icon: "FileText",
+    description: {
+      es: "Une, divide, rota y reordena PDFs directamente en tu navegador, sin servidor.",
+      en: "Merge, split, rotate and reorder PDFs right in your browser, no server involved.",
+    },
+    href: "#pdf-editor",
+  },
 ];
+
 
 export const companies: {
   name: string;
