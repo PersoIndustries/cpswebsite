@@ -12,10 +12,14 @@ import { Footer } from "@/components/site/Footer";
 import { CookieBanner } from "@/components/site/CookieBanner";
 import { ParallaxBackground } from "@/components/site/ParallaxBackground";
 import { LanguageProvider } from "@/lib/i18n";
+import carlosImg from "@/assets/carlos.jpg.asset.json";
 
 const title = "Carlos Peralta Sorolla (PERSO) — Project Manager & Dev";
 const description =
   "Carlos Peralta Sorolla (PERSO), project manager y desarrollador: CV, empresas y apps (Jardiper, LayerSuite, XCarbon), game dev, Web3, impresión 3D bajo pedido y tools.";
+const siteUrl = "https://project--46d4e489-763f-4444-acff-d9924defb6f3.lovable.app";
+const ogImage = `${siteUrl}${carlosImg.url}`;
+
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -26,12 +30,17 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "profile" },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: siteUrl },
+      { property: "og:image", content: ogImage },
+      { property: "og:image:width", content: "800" },
+      { property: "og:image:height", content: "800" },
+      { property: "og:image:alt", content: "Carlos Peralta Sorolla (PERSO)" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: ogImage },
       { name: "twitter:title", content: title },
       { name: "twitter:description", content: description },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: siteUrl + "/" }],
     scripts: [
       {
         type: "application/ld+json",
@@ -39,7 +48,10 @@ export const Route = createFileRoute("/")({
           "@context": "https://schema.org",
           "@type": "Person",
           name: "Carlos Peralta Sorolla",
+          image: ogImage,
+          url: siteUrl,
           alternateName: ["PERSO", "Perso_Dev"],
+
           jobTitle: "Project Manager & Product Developer",
           email: "carlosperaltasorolla@gmail.com",
           address: {
