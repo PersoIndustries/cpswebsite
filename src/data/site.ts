@@ -1,4 +1,4 @@
-import carlosImg from "@/assets/carlos.jpg.asset.json";
+
 
 export type L = { es: string; en: string };
 
@@ -17,7 +17,7 @@ export const profile = {
     es: "Ahora mismo: LayerSuite y XCarbon, impresión 3D bajo pedido, apoyo en los negocios familiares y dos másteres en marcha (MBA + Project Management y Mercados Financieros & Gestión de Activos).",
     en: "Right now: LayerSuite and XCarbon, 3D printing on demand, helping in the family businesses and two master's degrees in progress (MBA + Project Management and Financial Markets & Asset Management).",
   } satisfies L,
-  photo: carlosImg.url,
+  photo: "/carlos.jpg",
   email: "carlosperaltasorolla@gmail.com",
   location: {
     es: "Fraga, Huesca (España) — abierto a oportunidades en el extranjero",
