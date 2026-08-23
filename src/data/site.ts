@@ -47,7 +47,7 @@ export const tools: { name: string; icon: string; description: L; href: string }
       es: "Divide modelos STL en piezas imprimibles cuando no caben en la cama de impresión.",
       en: "Splits STL models into printable pieces when they don't fit the print bed.",
     },
-    href: "#stl-cutter",
+    href: "https://stlcutter.carlosperaltasorolla.com",
   },
   {
     name: "Helix Force",
@@ -56,7 +56,7 @@ export const tools: { name: string; icon: string; description: L; href: string }
       es: "Calculadora de fuerzas y parámetros para husillos y mecanismos helicoidales.",
       en: "Force and parameter calculator for lead screws and helical mechanisms.",
     },
-    href: "#helix-force",
+    href: "https://helixforce.carlosperaltasorolla.com",
   },
   {
     name: "SQL to Markdown",
@@ -65,7 +65,7 @@ export const tools: { name: string; icon: string; description: L; href: string }
       es: "Convierte esquemas y resultados SQL en tablas Markdown limpias en un clic.",
       en: "Turns SQL schemas and results into clean Markdown tables in one click.",
     },
-    href: "#sql-to-markdown",
+    href: "https://sqlmd.carlosperaltasorolla.com",
   },
   {
     name: "Massive Images Renamer",
@@ -74,7 +74,7 @@ export const tools: { name: string; icon: string; description: L; href: string }
       es: "Renombra lotes enormes de imágenes con reglas y patrones. 100% local, sin subir nada.",
       en: "Renames huge batches of images with rules and patterns. 100% local, nothing uploaded.",
     },
-    href: "#massive-images-renamer",
+    href: "https://renamer.blackmouthgames.com/",
   },
   {
     name: "Image Multi Converter",
@@ -83,7 +83,7 @@ export const tools: { name: string; icon: string; description: L; href: string }
       es: "Conversor local de imágenes por lotes entre formatos (PNG, JPG, WebP…).",
       en: "Local batch image converter between formats (PNG, JPG, WebP…).",
     },
-    href: "#image-converter",
+    href: "https://imgmulticonverter.carlosperaltasorolla.com",
   },
   {
     name: "PDF Editor (full local)",
@@ -93,6 +93,15 @@ export const tools: { name: string; icon: string; description: L; href: string }
       en: "Merge, split, rotate and reorder PDFs right in your browser, no server involved.",
     },
     href: "#pdf-editor",
+  },
+  {
+    name: "PDF Words Finder",
+    icon: "FileSearch",
+    description: {
+      es: "Busca palabras clave dentro de PDFs largos de muchas páginas, 100% local.",
+      en: "Find keywords inside long multi-page PDFs, 100% local.",
+    },
+    href: "https://pdfwordsfinder.carlosperaltasorolla.com",
   },
 ];
 

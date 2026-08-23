@@ -16,7 +16,7 @@ import { LanguageProvider } from "@/lib/i18n";
 const title = "Carlos Peralta Sorolla (PERSO) — Project Manager & Dev";
 const description =
   "Carlos Peralta Sorolla (PERSO), project manager y desarrollador: CV, empresas y apps (Jardiper, LayerSuite, XCarbon), game dev, Web3, impresión 3D bajo pedido y tools.";
-const siteUrl = "https://project--46d4e489-763f-4444-acff-d9924defb6f3.lovable.app";
+const siteUrl = "https://carlosperaltasorolla.com";
 const ogImage = `${siteUrl}/carlos.jpg`;
 
 

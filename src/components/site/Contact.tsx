@@ -62,8 +62,8 @@ export function Contact() {
           </div>
         </div>
 
-        <form onSubmit={handleSubmit} className="surface-card space-y-4 p-6">
-          <div className="space-y-2">
+        <form onSubmit={handleSubmit} className="surface-card space-y-4 p-6" suppressHydrationWarning>
+          <div className="space-y-2" suppressHydrationWarning>
             <Label htmlFor="name">{t(ui.formName)}</Label>
             <Input
               id="name"
@@ -73,7 +73,7 @@ export function Contact() {
               placeholder={t(ui.formNamePh)}
             />
           </div>
-          <div className="space-y-2">
+          <div className="space-y-2" suppressHydrationWarning>
             <Label htmlFor="email">{t(ui.formEmail)}</Label>
             <Input
               id="email"
@@ -84,7 +84,7 @@ export function Contact() {
               placeholder="tu@email.com"
             />
           </div>
-          <div className="space-y-2">
+          <div className="space-y-2" suppressHydrationWarning>
             <Label htmlFor="message">{t(ui.formMessage)}</Label>
             <Textarea
               id="message"
