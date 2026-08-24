@@ -50,13 +50,13 @@ export const tools: { name: string; icon: string; description: L; href: string }
     href: "https://stlcutter.carlosperaltasorolla.com",
   },
   {
-    name: "Helix Force",
+    name: "Helix Forge",
     icon: "Cog",
     description: {
       es: "Calculadora de fuerzas y parámetros para husillos y mecanismos helicoidales.",
       en: "Force and parameter calculator for lead screws and helical mechanisms.",
     },
-    href: "https://helixforce.carlosperaltasorolla.com",
+    href: "https://helixforge.carlosperaltasorolla.com",
   },
   {
     name: "SQL to Markdown",
@@ -130,7 +130,7 @@ export const companies: {
       es: "Planta de compostaje y agricultura familiar.",
       en: "Family composting plant and agriculture.",
     },
-    href: "#liett",
+    href: "https://liettiberica.es/",
     status: { es: "Activo", en: "Active" },
   },
   {
@@ -341,8 +341,8 @@ export const otherProjects: { name: string; description: L; href?: string; perio
   {
     name: "Asoc. Fraga LAN Party",
     description: {
-      es: "Organizador del evento local de videojuegos y tecnología.",
-      en: "Organizer of the local gaming and technology event.",
+      es: "Organizador del evento local de videojuegos y tecnología, con entre 300 y 350 participantes por edición.",
+      en: "Organizer of the local gaming and technology event, with 300 to 350 participants per edition.",
     },
     period: "2012 — 2019",
   },
@@ -435,8 +435,8 @@ export const education: { title: L; org: string; period: L; note?: L }[] = [
     org: "Centre de la Imatge i la Tecnologia Multimèdia (UPC)",
     period: { es: "Sep. 2015 — Jun. 2019 · Terrassa", en: "Sep. 2015 — Jun. 2019 · Terrassa" },
     note: {
-      es: "Participación en el grupo de investigación PSD — SEAT",
-      en: "Member of the PSD research group — SEAT",
+      es: "Participación en el grupo de investigación PSD — Creative Lab",
+      en: "Member of the PSD research group — Creative Lab",
     },
   },
   {
