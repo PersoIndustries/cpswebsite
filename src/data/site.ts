@@ -140,7 +140,7 @@ export const companies: {
       es: "SaaS, plataforma de gestión especializada para negocios de impresión 3D.",
       en: "SaaS, management platform built for 3D printing businesses.",
     },
-    href: "#layersuite",
+    href: "https://layersuite.com/",
     status: { es: "WIP", en: "WIP" },
   },
   {
@@ -150,8 +150,18 @@ export const companies: {
       es: "SaaS para plantas de compostaje + (to do) créditos de carbono Web3 y marketplace.",
       en: "SaaS for composting plants + (to do) Web3 carbon credits and marketplace.",
     },
-    href: "#xcarbon",
+    href: "https://xcarbon.io/",
     status: { es: "WIP", en: "WIP" },
+  },
+  {
+    name: "MoonCollector",
+    icon: "Moon",
+    description: {
+      es: "Museo digital propio para coleccionar, catalogar y exhibir piezas online.",
+      en: "Personal digital museum to collect, catalogue and exhibit pieces online.",
+    },
+    href: "https://museum.carlosperaltasorolla.com/",
+    status: { es: "Activo", en: "Active" },
   },
 ];
 
